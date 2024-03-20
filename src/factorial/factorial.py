@@ -17,17 +17,33 @@ def factorial(num): # Crea la funcion para verificar el factorial
             num -= 1
         return fact
 
+# num = 10 # Creamos el num
+# num = int(input("Por favor, ingrese el numero a probar: "))
+
+# if len(sys.argv) == 0:
+#    print( "Debe informar un número!" );
+#    sys.exit();
+# else:
+#     if num < 0:
+#         print ("Los numeros negativos no tienen factorial")
+#     elif num >= 0:
+#         print("Factorial ",num,"! es ", factorial(num));
+#     else:
+#         print("Tiene que aportar el numero para hacer pruebas")
+# Prueba el num y calcula el factorial
+
+# Rangos con factoriales
+print("Ingrese los dos extremos: ")
+desde = int(input())
+hasta = int(input())
+
 if len(sys.argv) == 0:
    print( "Debe informar un número!" );
    sys.exit();
-# En caso que la persona no aporte el numero
-
-num = 10 # Creamos el num
-
-if num < 0:
-    print ("Los numeros negativos no tienen factorial")
 else:
-    print("Factorial ",num,"! es ", factorial(num));
-# Prueba el num y calcula el factorial
-
-# pruebas
+    if desde | hasta  < 0:
+        print ("Los numeros negativos no tienen factorial")
+    elif desde & hasta >= 0:
+        print("El resultado de la multiplicacion de los factoriales es: ", (factorial(desde)*factorial(hasta)));
+    else:
+        print("Tiene que aportar el numero para hacer pruebas")
