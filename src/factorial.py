@@ -22,7 +22,7 @@ if len(sys.argv) == 0:
    sys.exit();
 # En caso que la persona no aporte el numero
 
-num = 0 # Creamos el num
+num = 10 # Creamos el num
 
 if num < 0:
     print ("Los numeros negativos no tienen factorial")
