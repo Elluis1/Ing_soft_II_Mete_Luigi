@@ -66,17 +66,17 @@ def factorial(num): # Crea la funcion para verificar el factorial
 #         print("Tiene que aportar el numero para hacer pruebas")
 
 # Rangos de factoriales con minimo 1
-print("Ingrese el extremo menor: ")
-num = 60
-desde = int(input())
+# print("Ingrese el extremo menor: ")
+# num = 60
+# desde = int(input())
 
-if len(sys.argv) == 0:
-   print( "Debe informar un número!" );
-   sys.exit();
-else:
-    if desde  < 0:
-        print ("Los numeros negativos no tienen factorial")
-    elif desde >= 0:
-        print("El resultado de la multiplicacion de los factoriales es: ", (factorial(num)*factorial(desde)));
-    else:
-        print("Tiene que aportar el numero para hacer pruebas")
+# if len(sys.argv) == 0:
+#    print( "Debe informar un número!" );
+#    sys.exit();
+# else:
+#     if desde  < 0:
+#         print ("Los numeros negativos no tienen factorial")
+#     elif desde >= 0:
+#         print("El resultado de la multiplicacion de los factoriales es: ", (factorial(num)*factorial(desde)));
+#     else:
+#         print("Tiene que aportar el numero para hacer pruebas")
