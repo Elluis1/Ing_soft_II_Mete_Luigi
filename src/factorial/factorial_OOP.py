@@ -1,24 +1,21 @@
 class factorial_OOP():
-    def __init__(self,min,max):
-        self.min = min
-        self.max = max
+    def __init__(self):
+        pass
 
-    def run(min,max):
-        if min | max < 0:
-            print("Los numeros no pueden ser negativos")
-        elif min == 0 & max == 0:
+    def factorial(self, num):
+        if num < 0:
+            print("No existe el factorial de numeros negativos")
+        elif num == 0:
             return 1
-        elif min == 0 & max > 0:
-            min = 1
+        else:
             fact = 1
-            while(max > 1):
-                fact *= max
-                max -= 1
+            while(num > 1):
+                fact *= num
+                num -= 1
             return fact
-        else: max == 0 & min > 0
-        max = 1
-        fact = 1
-        while(min > 1):
-            fact *= min
-            min -= 1
-        return fact
+    def run(self, min_num = 1, max_num = 60):
+        if min_num > max_num:
+            print("El primer numero es mayor al segundo")
+            return
+        for num in range(min_num, max_num + 1):
+		        print("Factorial ", num, "! es ", self.factorial(int(num)))
