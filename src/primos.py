@@ -12,5 +12,6 @@ for num in range(lower, upper + 1):
        for i in range(2, num):
            if (num % i) == 0:
                break
+           # Si el num despues de realizar el mod da 0 genera un break
        else:
            print(num)
