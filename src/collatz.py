@@ -21,3 +21,4 @@ for num in range(1, 10001):
 
 plt.scatter(x_values, y_values, s=4)
 plt.show()
+#Num collatz
