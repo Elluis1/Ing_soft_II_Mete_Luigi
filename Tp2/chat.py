@@ -12,12 +12,28 @@ client = OpenAI(
 )
 
 while True:
-    prompt = input("Introduce una pregunta: ")
+    try:
+        prompt = input("Introduce una pregunta: ")
+    except KeyboardInterrupt:
+        print('\Saliendo del programa')
+        break
+    except Exception as e:
+        print('Error al leer la entrada: ', e)
+        continue
 
-    completion = client.completions.create(
-        model="gpt-3.5-turbo",
-        prompt=prompt,
-        max_tokens=2048
+    try:
+        completion = client.completions.create(
+            model="gpt-3.5-turbo",
+            prompt=prompt,
+            max_tokens=2048
     )
-    print('You: ', prompt)
-    print('ChatGPT: ', completion.choices[0].text)
+    except Exception as e:
+        print('Error al obtener la respuesta: ', e)
+        continue
+
+    try:
+        print('You: ', prompt)
+        print('ChatGPT: ', completion.choices[0].text)
+    except Exception as e:
+        print('Error al imprimir la respuesta: ', e)
+
