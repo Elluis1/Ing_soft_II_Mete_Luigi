@@ -1,3 +1,5 @@
+Punto 6
+
 Primera revision
 ************* Module chat
 chat.py:31:0: C0303: Trailing whitespace (trailing-whitespace)
