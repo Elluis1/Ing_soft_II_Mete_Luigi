@@ -1,17 +1,23 @@
 import os
 from openai import OpenAI
+import openai
+from dotenv import load_dotenv
+
+load_dotenv()
+
+# openai.api_key = os.getenv("OPENAI_API_KEY")
 
 client = OpenAI(
-    # This is the default and can be omitted
-    api_key=os.environ.get("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&"),
+    api_key=os.environ['OPENAI_API_KEY']
 )
 
-chat_completion = client.chat.completions.create(
-    messages=[
-        {
-            "role": "user",
-            "content": "Say this is a test",
-        }
-    ],
-    model="gpt-3.5-turbo",
-)
+while True:
+    prompt = input("Introduce una pregunta: ")
+
+    completion = client.completions.create(
+        model="gpt-3.5-turbo",
+        prompt=prompt,
+        max_tokens=2048
+    )
+    print('You: ', prompt)
+    print('ChatGPT: ', completion.choices[0].text)
