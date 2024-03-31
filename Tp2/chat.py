@@ -1,6 +1,5 @@
 import os
 from openai import OpenAI
-import openai
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -11,11 +10,19 @@ client = OpenAI(
     api_key=os.environ['OPENAI_API_KEY']
 )
 
+last_prompt = "" #Aca se guarda la ultima consulta
+
 while True:
     try:
-        prompt = input("Introduce una pregunta: ")
-    except KeyboardInterrupt:
-        print('\Saliendo del programa')
+        if last_prompt:
+            prompt = input(f"Edita la última consulta ('{last_prompt}'): ")
+        else:
+            prompt = input("Introduce una consulta (o presiona Ctrl+C para salir): ")
+
+        if prompt.strip():
+            last_prompt=prompt
+    except KeyboardInterrupt: #Ctrl + c
+        print('\nSaliendo del programa')
         break
     except Exception as e:
         print('Error al leer la entrada: ', e)
@@ -24,7 +31,7 @@ while True:
     try:
         completion = client.completions.create(
             model="gpt-3.5-turbo",
-            prompt=prompt,
+            prompt=last_prompt,
             max_tokens=2048
     )
     except Exception as e:
@@ -36,4 +43,6 @@ while True:
         print('ChatGPT: ', completion.choices[0].text)
     except Exception as e:
         print('Error al imprimir la respuesta: ', e)
+
+
 
