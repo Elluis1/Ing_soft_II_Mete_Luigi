@@ -1,0 +1,44 @@
+Primera revision
+************* Module chat
+chat.py:31:0: C0303: Trailing whitespace (trailing-whitespace)
+chat.py:46:0: C0301: Line too long (116/100) (line-too-long)
+chat.py:47:0: C0301: Line too long (119/100) (line-too-long)
+chat.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+chat.py:18:0: R1703: The if statement can be replaced with 'var = bool(test)' (simplifiable-if-statement)
+chat.py:19:4: C0103: Constant name "convers_mode" doesn't conform to UPPER_CASE naming style (invalid-name)
+chat.py:21:4: C0103: Constant name "convers_mode" doesn't conform to UPPER_CASE naming style (invalid-name)
+chat.py:23:0: C0116: Missing function or method docstring (missing-function-docstring)
+chat.py:23:25: W0621: Redefining name 'response' from outer scope (line 59) (redefined-outer-name)
+chat.py:26:0: C0116: Missing function or method docstring (missing-function-docstring)
+chat.py:26:26: W0621: Redefining name 'response' from outer scope (line 59) (redefined-outer-name)
+chat.py:27:4: R1705: Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (no-else-return)
+chat.py:26:19: W0613: Unused argument 'query' (unused-argument)
+chat.py:26:26: W0613: Unused argument 'response' (unused-argument)
+chat.py:32:0: C0116: Missing function or method docstring (missing-function-docstring)
+chat.py:35:0: C0103: Constant name "last_prompt" doesn't conform to UPPER_CASE naming style (invalid-name)
+chat.py:67:11: W0718: Catching too general exception Exception (broad-exception-caught)
+chat.py:46:24: E1120: No value for argument 'query' in function call (no-value-for-parameter)
+chat.py:46:24: E1120: No value for argument 'response' in function call (no-value-for-parameter)
+chat.py:47:12: C0103: Constant name "full_query" doesn't conform to UPPER_CASE naming style (invalid-name)
+chat.py:51:8: C0103: Constant name "completion" doesn't conform to UPPER_CASE naming style (invalid-name)
+-----------------------------------
+Your code has been rated at 2.56/10
+
+Ultima revision
+************* Module chat
+chat.py:29:0: C0303: Trailing whitespace (trailing-whitespace)
+chat.py:41:0: C0301: Line too long (116/100) (line-too-long)
+chat.py:42:0: C0301: Line too long (119/100) (line-too-long)
+chat.py:62:0: C0304: Final newline missing (missing-final-newline)
+chat.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+chat.py:16:0: R1703: The if statement can be replaced with 'var = bool(test)' (simplifiable-if-statement)
+chat.py:21:0: C0116: Missing function or method docstring (missing-function-docstring)
+chat.py:21:25: W0621: Redefining name 'response' from outer scope (line 53) (redefined-outer-name)
+chat.py:24:26: W0613: Unused argument 'response' (unused-argument)                 ng)
+chat.py:30:0: C0116: Missing function or method docstring (missing-function-docstrined-outer-name)ng)                                                                                dent the code inside it (no-else-return)
+chat.py:61:11: W0718: Catching too general exception Exception (broad-exception-caught)
+chat.py:41:24: E1120: No value for argument 'query' in function call (no-value-for-ng)parameter)                                                                         ght)
+chat.py:41:24: E1120: No value for argument 'response' in function call (no-value-fparameter)or-parameter)                                                                      or-parameter)
+
+------------------------------------------------------------------
+Your code has been rated at 3.42/10 (previous run: 3.16/10, +0.26)

@@ -1,0 +1,42 @@
+Punto 5/a
+"comment_ratio": 35.641
+
+Punto 5/b
+"halstead_effort": 24931.711  -  "halstead_timerequired": 1385.095
+
+Punto 5/c
+"halstead_bugprop": 0.435, trabaja en base a los errores que tuve la primera vez que ejecute el programa y cuanto
+estuve para solucionarlo (claramente es alto)
+
+Punto 5/d
+Hay varias posibilidades, por ejemplo eliminar codigo redundante, utilizar abstracciones adecuadas, hacer pruebas y cambios en el codigo para hacerlo mas legible,
+etc.
+
+Punto 5/e
+"overall": {
+    "comment_ratio": 35.641,
+    "cyclomatic_complexity": 14,
+    "fanout_external": 4,
+    "fanout_internal": 0,
+    "halstead_bugprop": 0.435,
+    "halstead_difficulty": 19.091,
+    "halstead_effort": 24931.711,
+    "halstead_timerequired": 1385.095,
+    "halstead_volume": 1305.947,
+    "loc": 53,
+    "maintainability_index": 66.153,
+    "operands_sum": 112,
+    "operands_uniq": 44,
+    "operators_sum": 110,
+    "operators_uniq": 15,
+    "pylint": 100.0,
+    "tiobe": 85.369,
+    "tiobe_compiler": 100.0,
+    "tiobe_complexity": 2.462,
+    "tiobe_coverage": 100.0,
+    "tiobe_duplication": 100.0,
+    "tiobe_fanout": 100.0,
+    "tiobe_functional": 100.0,
+    "tiobe_security": 100.0,
+    "tiobe_standard": 100.0
+  },
