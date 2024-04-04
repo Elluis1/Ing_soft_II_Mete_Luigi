@@ -1,0 +1,3 @@
+Hola profesor, tenia un error con la api yo, porque me daba que era vieja la libreria que use, asi que la baje a la version 1.0.0 para que funcionara y cuando iba a probarla alguien hizo que se cerrara la api,
+porque la subio a git parece, por si hay algo que no funciona
+Se lo escribo aca porque nose donde podria agregarlo, mil disculpas

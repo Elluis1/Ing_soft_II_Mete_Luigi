@@ -5,8 +5,6 @@ from dotenv import load_dotenv #Entornos de variable
 # Mi api esta limitada, asi que no pude verificar que funcionara de verdad todo
 load_dotenv() #Uso de archivo .env
 
-# openai.api_key = os.getenv("OPENAI_API_KEY")
-
 client = OpenAI(
     api_key=os.environ['OPENAI_API_KEY'] #llamado de la api de openai
 )
