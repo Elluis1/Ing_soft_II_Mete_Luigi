@@ -1,5 +1,3 @@
-from builder import *
-
 def llamadoFunciones():
     # punto 1
     print('Escriba el numero del que quiere saber el factorial: ')
@@ -16,7 +14,7 @@ def llamadoFunciones():
     # punto 4
     print('¿Que condicion impositiva tiene usted?(1 = IVA Responsable, 2 = IVA no inscripto, 3 = IVA Exento): ')
     print(condicionIVA(int(input())))
-    
+
     # punto 5
 
 
@@ -87,6 +85,5 @@ def condicionIVA(condicion):
         return 'No es una condicion impositiva'
 
 # funcion punto 5 ( "" )
-
 
 llamadoFunciones()
