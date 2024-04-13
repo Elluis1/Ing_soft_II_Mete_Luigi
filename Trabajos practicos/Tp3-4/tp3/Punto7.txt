@@ -1,0 +1,6 @@
+Un caso en el que se podria utilizar el patron Abstract Factory es si por ejemplo
+estuvieramos creando un juego de estrategia en tiempo real, con distintas unidades
+militares, por ejemplo soldado, francotirador, luchador, mortero, etc. con clases como por ejemplo
+UnitFabric con la cual se crearian las unidades, o clases para hacer que distintas unidades sean
+aliadas, etc.
+
