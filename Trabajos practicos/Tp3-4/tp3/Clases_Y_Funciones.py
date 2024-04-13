@@ -80,6 +80,8 @@ def crearAvion():
 
     builder.produce_part_body()
     builder.produce_part_ala()
+    builder.produce_part_ala()
+    builder.produce_part_turbinas()
     builder.produce_part_turbinas()
     builder.produce_part_tren()
     builder.product.list_parts()
@@ -94,6 +96,7 @@ def espera1Seg():
     time.sleep(1)
 
 def llamadoFunciones():
+
     # punto 1
     print('')
     print('Punto 1')
