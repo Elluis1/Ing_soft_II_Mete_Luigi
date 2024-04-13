@@ -40,7 +40,19 @@ class Ping:
             except Exception as e:
                 print(f"Error al intentar hacer ping a {ip_address}: {str(e)}")
 
+class PingProxy:
+    def __init__(self):
+         self.ping = Ping()
+     
+    def execute(self, port):
+        if port == '192.168.0.254':
+            self.ping.executeFree("www.google.com")
+        else:
+            self.ping.execute(port)
 
 ping = Ping()
 # ping.execute('192.168.1.1')
-ping.executeFree('132.168.1.1')
+# ping.executeFree('132.168.1.1')
+
+ping_proxy = PingProxy()
+ping_proxy.execute('192.168.0.254')
