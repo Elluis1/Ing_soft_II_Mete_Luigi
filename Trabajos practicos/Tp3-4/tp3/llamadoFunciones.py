@@ -1,25 +1,16 @@
-def llamadoFunciones():
-    # punto 1
-    print('Escriba el numero del que quiere saber el factorial: ')
-    print(factorial(int(input())))
+from builder import *
+from abc import ABC, abstractmethod
+from typing import Any
 
-    # punto 2
-    print('Ingrese el valor del que quiere recibir el calculo: ')
-    print(calculoImpuestos(int(input())))
-
-    # punto 3 (Lo hice por numeros para simplificar)
-    print('De que manera quiere la entrega(1 = mostrador, 2 = retira el cliente, 3 = delivery): ')
-    print(entregaFastFood(int(input())))
-
-    # punto 4
-    print('¿Que condicion impositiva tiene usted?(1 = IVA Responsable, 2 = IVA no inscripto, 3 = IVA Exento): ')
-    print(condicionIVA(int(input())))
-
-    # punto 5
-
+class Singleton(type):
+    _instances = {}
+    def __call__(cls, *args, **kwargs):
+        if cls not in cls._instances:
+            cls._instances[cls] = super(Singleton, cls).__call__(*args, **kwargs)
+        return cls._instances[cls]
 
 # funcion punto 1 ( factorial )
-def factorial (num):
+def factorial (num, metaclass=Singleton):
     a = 1
     if num == 0 or num == 1:
         return 1
@@ -81,9 +72,42 @@ def condicionIVA(condicion):
         print('                                           ')
         print('                                           ')
 
+
+
     else:
         return 'No es una condicion impositiva'
 
-# funcion punto 5 ( "" )
+# funcion punto 5 ( "avión" )
+def crearAvion():
+    builder = ConcreteBuilder1()
+
+    builder.produce_part_body()
+    builder.produce_part_ala()
+    builder.produce_part_turbinas()
+    builder.produce_part_tren()
+    builder.product.list_parts()
+
+
+def llamadoFunciones():
+    # punto 1
+    print('Escriba el numero del que quiere saber el factorial: ')
+    print(factorial(int(input())))
+
+    # punto 2
+    print('Ingrese el valor del que quiere recibir el calculo: ')
+    print(calculoImpuestos(int(input())))
+
+    # punto 3 (Lo hice por numeros para simplificar)
+    print('De que manera quiere la entrega(1 = mostrador, 2 = retira el cliente, 3 = delivery): ')
+    print(entregaFastFood(int(input())))
+
+    # punto 4
+    print('¿Que condicion impositiva tiene usted?(1 = IVA Responsable, 2 = IVA no inscripto, 3 = IVA Exento): ')
+    print(condicionIVA(int(input())))
+
+    # punto 5
+    print('')
+    print('Creacion de un avion:')
+    print(crearAvion())
 
 llamadoFunciones()

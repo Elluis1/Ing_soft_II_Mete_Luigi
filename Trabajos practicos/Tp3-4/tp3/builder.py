@@ -32,6 +32,9 @@ class Builder(ABC):
         pass
 
 
+
+
+
 class ConcreteBuilder1(Builder):
     """
     The Concrete Builder classes follow the Builder interface and provide
@@ -78,16 +81,16 @@ class ConcreteBuilder1(Builder):
     def produce_part_c(self) -> None:
         self._product.add("PartC1")
 
-    def produce_part_Body(self) -> None:
+    def produce_part_body(self) -> None:
         self._product.add("Body")
 
-    def produce_part_Turbinas(self) -> None:
-        self._product.add("Turbinas")    
+    def produce_part_turbinas(self) -> None:
+        self._product.add("Turbinas")
 
-    def produce_part_Alas(self) -> None:
+    def produce_part_ala(self) -> None:
         self._product.add("Alas")
 
-    def produce_part_Tren(self) -> None:
+    def produce_part_tren(self) -> None:
         self._product.add("Tren de aterrizaje")
 
 class Product1():
@@ -186,5 +189,3 @@ if __name__ == "__main__":
     builder.product.list_parts()
 
     print("\n")
-
-
