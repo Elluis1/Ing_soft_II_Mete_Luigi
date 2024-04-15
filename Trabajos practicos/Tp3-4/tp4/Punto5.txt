@@ -1,0 +1,8 @@
+El patrón "Flyweight" es útil en situaciones donde necesitas manejar una gran cantidad de objetos que comparten características similares, y quieres optimizar el uso de memoria y mejorar el rendimiento. 
+Ejemplo:
+
+Imaginemos que estámos desarrollando un videojuego de estrategia donde hay muchas unidades en pantalla al mismo tiempo, como soldados en un campo de batalla.
+Cada soldado tiene propiedades únicas, como su tipo, posición, estado actual (atacando, defendiendo, etc.), pero también hay muchas propiedades que son comunes a todos los soldados, como su imagen, tamaño, y otros datos compartidos.
+En lugar de crear una instancia separada de cada objeto para cada soldado, lo que podría consumir mucha memoria, podemos aplicar el patrón "Flyweight".
+En este caso, crearías una clase FlyweightSoldier que contenga las propiedades comunes a todos los soldados, como la imagen, tamaño, y otros datos compartidos.
+Luego, cada soldado en el juego sería una instancia de esta clase FlyweightSoldier, y solo almacenarías las propiedades únicas de cada soldado por separado.

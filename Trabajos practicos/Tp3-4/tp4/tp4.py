@@ -1,58 +1,28 @@
-import subprocess
-from proxy import *
-import re
+from clases_funciones import *
 
-IP = '192.168.0.254'
-
-class Ping:
-    def __init__(self):
-        pass
-
-    def execute(self, port):
-        if not re.match(r'^192\.', port):
-            print('La direccion IP no comienza con 192., es obligatorio ')
-            return
-
-        for i in range(10):
-            try:
-                result = subprocess.run(['ping', '-c', '1', port], stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=5, universal_newlines=True)
-                if result.returncode == 0:
-                    print(f"Ping exitoso a {port}")
-                else:
-                        print(f"Intento {i+1}: No se pudo hacer ping a {port}")
-            except subprocess.TimeoutExpired:
-                    print(f"Intento {i+1}: Tiempo de espera agotado para {port}")
-            except Exception as e:
-                    print(f"Error al intentar hacer ping a {port}: {str(e)}")
-
-
-    def executeFree(self, ip_address):
-        # Realizar 10 intentos de ping sin verificación de dirección
-        for i in range(3):
-            try:
-                result = subprocess.run(['ping', '-c', '1', ip_address], stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=5, universal_newlines=True)
-                if result.returncode == 0:
-                    print(f"Ping exitoso a {ip_address}")
-                else:
-                    print(f"Intento {i+1}: No se pudo hacer ping a {ip_address}")
-            except subprocess.TimeoutExpired:
-                print(f"Intento {i+1}: Tiempo de espera agotado para {ip_address}")
-            except Exception as e:
-                print(f"Error al intentar hacer ping a {ip_address}: {str(e)}")
-
-class PingProxy:
-    def __init__(self):
-         self.ping = Ping()
-     
-    def execute(self, port):
-        if port == '192.168.0.254':
-            self.ping.executeFree("www.google.com")
-        else:
-            self.ping.execute(port)
-
-ping = Ping()
+# print(' Punto 1 ')
+# print('  ')
+# ping = Ping()
 # ping.execute('192.168.1.1')
 # ping.executeFree('132.168.1.1')
+# ping_proxy = PingProxy()
+# ping_proxy.execute('192.168.0.254')
 
-ping_proxy = PingProxy()
-ping_proxy.execute('192.168.0.254')
+# punto 2
+# laminasFabric.punto2(int(input("Elija que Tren laminador quiere usar(1 = Genera planchas de 5 mts, 2 = de 10 mts): ")))
+
+# punto 3
+# subConjuntos.punto4()
+
+# punto 4
+# print('')
+# print('Punto 4 ')
+# number = 15
+# decorated_operations = DivideByThreeDecorator(
+#         MultiplyByTwoDecorator(AddTwoDecorator(NumberOperations(number)))
+#     )
+# print("\nValor inicial (con decoradores):", decorated_operations.get_value())
+# print("Sumar 2:", AddTwoDecorator(decorated_operations).get_value())
+# print("Multiplicar por 2:", MultiplyByTwoDecorator(decorated_operations).get_value())
+# print("Dividir por 3:", DivideByThreeDecorator(decorated_operations).get_value())
+
