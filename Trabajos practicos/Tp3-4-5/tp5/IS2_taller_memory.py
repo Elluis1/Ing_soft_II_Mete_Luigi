@@ -4,7 +4,7 @@ import os
 #*-------------------------------------------------------------------
 class Memento:
 	def __init__(self, file, content):
-		
+
 		self.file = file
 		self.content = content
 
@@ -27,7 +27,7 @@ class FileWriterUtility:
 			self.history.pop(0)
 		self.history.append(Memento(self.file, self.content))
 
-	def undo(self, memento):
+	def undo(self, steps_back=0):
 		if steps_back >= len(self.history):
 			steps_back = len(self.history) - 1
 		memento = self.history[-1 - steps_back]
@@ -40,7 +40,7 @@ class FileWriterCaretaker:
 		self.history_index = -1
 
 	def save(self, writer):
-		self.obj = writer.save()
+		writer.save()
 
 	def undo(self, writer, steps_back=0):
 		writer.undo(steps_back)

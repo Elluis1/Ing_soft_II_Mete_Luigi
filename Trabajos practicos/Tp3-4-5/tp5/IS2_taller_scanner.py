@@ -6,7 +6,7 @@ import os
 class State:
 
 	def scan(self):
-		
+
 		self.pos += 1
 		if self.pos == len(self.stations):
 			self.pos = 0
@@ -47,16 +47,6 @@ class FmState(State):
 	def memorize(self, station):
 		self.stations.append(station)
 
-	def switch_station(self, index):
-			if isinstance(self.state, FmState):
-				if index < len(self.fmstate.stations):
-					self.fmstate.pos = index
-					print("Cambiando a estación memorizada FM: {} {}".format(self.fmstate.stations[index], self.fmstate.name))
-			elif isinstance(self.state, AmState):
-				if index < len(self.amstate.stations):
-					self.amstate.pos = index
-					print("Cambiando a estación memorizada AM: {} {}".format(self.amstate.stations[index], self.amstate.name))
-
 
 #*--------- Construye la radio con todas sus formas de sintonía
 class Radio:
@@ -79,6 +69,16 @@ class Radio:
 
 	def memorize_station(self, station):
 		self.state.memorize(station)
+
+	def switch_station(self, index):
+			if isinstance(self.state, FmState):
+				if index < len(self.fmstate.stations):
+					self.fmstate.pos = index
+					print("Cambiando a estación memorizada FM: {} {}".format(self.fmstate.stations[index], self.fmstate.name))
+			elif isinstance(self.state, AmState):
+				if index < len(self.amstate.stations):
+					self.amstate.pos = index
+					print("Cambiando a estación memorizada AM: {} {}".format(self.amstate.stations[index], self.amstate.name))
 
 #*---------------------
 

@@ -1,5 +1,4 @@
 # Punto 1
-
 class Handler:
     def __init__(self, successor=None):
         self.successor = successor
