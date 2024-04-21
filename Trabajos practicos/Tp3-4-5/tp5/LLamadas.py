@@ -18,26 +18,23 @@ from IS2_taller_memory import *
 # print("\n")
 
 # Punto 3
-# if __name__ == "__main__":
-#     # The client code.
+# subject = ConcreteSubject()
 
-#     subject = ConcreteSubject()
+# observer_ABCD = SpecificObserver("ABCD")
+# subject.attach(observer_ABCD)
 
-#     observer_ABCD = SpecificObserver("ABCD")
-#     subject.attach(observer_ABCD)
+# observer_EFGH = SpecificObserver("EFGH")
+# subject.attach(observer_EFGH)
 
-#     observer_EFGH = SpecificObserver("EFGH")
-#     subject.attach(observer_EFGH)
+# observer_WXYZ = SpecificObserver("WXYZ")
+# subject.attach(observer_WXYZ)
 
-#     observer_WXYZ = SpecificObserver("WXYZ")
-#     subject.attach(observer_WXYZ)
+# observer_1234 = SpecificObserver("1234")
+# subject.attach(observer_1234)
 
-#     observer_1234 = SpecificObserver("1234")
-#     subject.attach(observer_1234)
-
-#     for _ in range(8):
-#         generated_id = "".join(choice("ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890") for _ in range(4))
-#         subject.notify(generated_id)
+# for _ in range(8):
+#     generated_id = "".join(choice("ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890") for _ in range(4))
+#     subject.notify(generated_id)
 
 # Punto 4
 # if __name__ == "__main__":
