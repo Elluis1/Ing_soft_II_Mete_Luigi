@@ -2,6 +2,9 @@ import sys
 import json
 import os
 
+# b) En realidad el proceso de decisión se puede automatizar, bastará que exista
+# saldo en la respectiva cuenta y que los pagos se hagan en forma balanceada
+
 def load_banks(archivo):
     try:
         with open(archivo, 'r') as file:
@@ -15,18 +18,33 @@ def load_banks(archivo):
 
 def show_banks(bancos):
     print("Bancos disponibles: ")
-    for i, (banco, token) in enumerate(bancos.items(), 1):
+    for i, (banco) in enumerate(bancos, 1):
         print(f"{i}. {banco}")
 
+# def select_bank(bancos):
+#     while True:
+#         try:
+#             seleccion = int(input("Selecciona el numero del banco:"))
+#             if 1 <= seleccion <= len(bancos):
+#                 banco_seleccionado = list(bancos.keys())[seleccion - 1]
+#                 return banco_seleccionado, bancos[banco_seleccionado]
+#             else:
+#                 print("seleccion invalida, intenta de nuevo.")
+#         except ValueError:
+#             print("Entrada invalida, por favor ingresa un numero")
+
+
 def select_bank(bancos):
-    while True:
         try:
-            seleccion = int(input("Selecciona el numero del banco:"))
-            if 1 <= seleccion <= len(bancos):
-                banco_seleccionado = list(bancos.keys())[seleccion - 1]
-                return banco_seleccionado, bancos[banco_seleccionado]
+            coste = int(input("¿Cuanto es el coste del pago? "))
+            if 1 <= coste:
+                for i in bancos:
+                    if i["saldo"] >= coste:
+                        return print("este token realiza el pago", i["nombre"])
+                    else:
+                        return print("No tenes ningun token que pueda costearlo")
             else:
-                print("seleccion invalida, intenta de nuevo.")
+                print("coste invalido, intenta de nuevo.")
         except ValueError:
             print("Entrada invalida, por favor ingresa un numero")
 
@@ -63,22 +81,14 @@ def main():
                 }
 
                 print("El objeto del archivo es:", json.dumps(objarchivo, indent=4, ensure_ascii=False))
-                
+
                 # Nuevas funcionalidades: selección de banco y validación de token
                 bancos = obj
                 if not bancos:
                     return
-                
+
                 show_banks(bancos)
                 banco_seleccionado = select_bank(bancos)
-                return(print(f"Has seleccionado: {banco_seleccionado}"))
-
-                token_ingresado = input("Ingresa el token: ")
-
-                if token_validation(banco_seleccionado, token_ingresado):
-                    print("Token válido. Pago liberado.")
-                else:
-                    print("Token inválido. No se pudo liberar el pago.")
 
             except FileNotFoundError:
                 print("El archivo especificado no se encontró.")

@@ -1,4 +1,12 @@
-{ 
-        "token1": "C598-ECF9-F0F7-881A",
-        "token2": "C598-ECF9-F0F7-881B"
-}
+[
+  {
+    "nombre": "token1",
+    "token1": "C598-ECF9-F0F7-881A",
+    "saldo": 1000
+  },
+  {
+    "nombre": "token2",
+    "token2": "C598-ECF9-F0F7-881B",
+    "saldo": 2000
+  }
+]
