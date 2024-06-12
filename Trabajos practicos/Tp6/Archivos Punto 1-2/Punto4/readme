@@ -1,0 +1,12 @@
+Metodos de uso
+
+Para llamar a la version del programa:
+python3(o su metodo para ejecutar un archivo de python, el mio es python 3) "nombreprograma.py" -v
+
+Para llamar y ejecutar el programa:
+
+python3(o su metodo para ejecutar un archivo de python, el mio es python 3) "nombreprograma.py"
+si quiere cortar el programa cuando te pida un pago de 500, si le das a n te mostrara todo el listado de pagos con sus numeros de pedido
+si le das a s, llegara a un punto en el que se le acabaran los fondos a los tokens, por ende se repetira que "no tiene fondos", cuando le de a n se mostraran los pagos que se pudieron realizar
+
+Gracias por leer. Luigi Mete
